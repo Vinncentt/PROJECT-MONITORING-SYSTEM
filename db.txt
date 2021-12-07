@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS Task(
 
 
 CREATE TABLE IF NOT EXISTS Project (
-	id INT,
+	id VARCHAR(50),
     Name VARCHAR(50),
     Description TEXT,
     StartDate DATE,
@@ -73,3 +73,11 @@ CREATE TABLE IF NOT EXISTS Work(
     EndDate DATE,
     PRIMARY KEY (id)
 );
+
+
+//Relations between tables
+
+ALTER TABLE task 
+ADD CONSTRAINT fk_task_project
+FOREIGN KEY (id_project)
+REFERENCES project(id);
