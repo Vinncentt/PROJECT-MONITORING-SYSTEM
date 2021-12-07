@@ -1,0 +1,23 @@
+// TABLES CREATING
+CREATE TABLE IF NOT EXISTS Task(
+	id VARCHAR(50),
+    Label VARCHAR(50),
+    Description TEXT,
+    StartDate DATE,
+    EndDate DATE,
+	Status VARCHAR(50),
+    Price FLOAT,
+	Facturated BOOL,
+	Payed BOOL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS Project (
+	id INT,
+    Name VARCHAR(50),
+    Description TEXT,
+    StartDate DATE,
+	Status VARCHAR(50),
+    Price FLOAT,
+    PRIMARY KEY (id)
+);
